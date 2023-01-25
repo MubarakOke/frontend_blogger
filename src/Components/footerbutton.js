@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";

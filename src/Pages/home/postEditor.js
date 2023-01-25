@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom"
 import Navbar from "../../Components/navbar";
 import FooterButton from "../../Components/footerbutton";
@@ -33,7 +33,7 @@ const PostEditor = () => {
 
     let toastID= toast.loading("Publishing........", {position: "top-center", style: { color: "#0E4E48" }});
     try{
-      const response= await baseAPI.put(`/blog/post/${location.state.postID}/`, formData, {headers: {"Authorization": `Bearer ${auth.token}`}});
+      await baseAPI.put(`/blog/post/${location.state.postID}/`, formData, {headers: {"Authorization": `Bearer ${auth.token}`}});
       toast.dismiss(toastID)
       toast.success("Post successfully published")
       navigate("/home/post")
@@ -58,7 +58,7 @@ const PostEditor = () => {
 
     let toastID= toast.loading("Saving post as draft.......", {position: "top-center", style: { color: "#0E4E48" }});
     try{
-      const response= await baseAPI.put(`/blog/post/${location.state.postID}/`, formData, {headers: {"Authorization": `Bearer ${auth.token}`}});
+      await baseAPI.put(`/blog/post/${location.state.postID}/`, formData, {headers: {"Authorization": `Bearer ${auth.token}`}});
       toast.dismiss(toastID)
       toast.success("Post successfully saved as draft")
       navigate("/home/post")

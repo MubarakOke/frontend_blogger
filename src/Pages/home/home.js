@@ -1,14 +1,10 @@
 import React from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { Outlet } from "react-router-dom";
 import Navbar from "../../Components/navbar";
 
 
 const Home = () => {
-  const [hamburger, setHamburger] = React.useState(0);
-  const [activeTab, setActiveTab] = React.useState();
-  const location = useLocation();
-
+  const [hamburger, setHamburger] = React.useState(0)
 
   return (
     <div>

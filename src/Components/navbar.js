@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillHome } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
-import { SiGooglemessages } from "react-icons/si";
 import { RiLogoutCircleFill } from "react-icons/ri";
 import Logo1 from "../Assets/image/Logo2.png";
 import Logo from "../Assets/svg/Logo.svg";

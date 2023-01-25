@@ -27,7 +27,7 @@ function Deletemodal({modalOpen, setModalOpen, postID, setPostID}) {
         if (postID){
             let toastID= toast.loading("deleting post......", {position: "top-center", style: { color: "#0E4E48" }});
             try{
-              const response= await baseAPI.delete(`/blog/post/${postID}/`, {headers: {"Authorization": `Bearer ${auth.token}`}});
+              await baseAPI.delete(`/blog/post/${postID}/`, {headers: {"Authorization": `Bearer ${auth.token}`}});
               dispatch(FetchPostAction())
               toast.dismiss(toastID)
               toast.success("Post deleted successfully")
